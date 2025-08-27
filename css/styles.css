@@ -9,6 +9,18 @@
   --card: 20 20 28;
   --shadow: 0 10px 30px rgba(0,0,0,.35);
 }
+/* Global Smooth Scroll */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Body fix for unwanted horizontal scroll */
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden; /* Left-right scroll remove */
+}
+
 
 * { box-sizing: border-box; }
 html, body { height: 100%; }
