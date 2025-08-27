@@ -1,5 +1,16 @@
 // Muhammad Imran — Portfolio Interactions & Animations
 // Smooth scroll with Lenis
+
+// Fix uneven scroll speed
+window.addEventListener("wheel", (event) => {
+  event.preventDefault();
+  window.scrollBy({
+    top: event.deltaY < 0 ? -60 : 60, // fixed speed (60px per step)
+    left: 0,
+    behavior: "smooth"
+  });
+}, { passive: false });
+
 const lenis = new Lenis({ smoothWheel: true });
 function raf(time){ lenis.raf(time); requestAnimationFrame(raf); }
 requestAnimationFrame(raf);
