@@ -9,3 +9,73 @@
 .cursor-ring{position:fixed;left:0;top:0;width:160px;height:160px;border-radius:50%;pointer-events:none;transform:translate(-50%,-50%);mix-blend-mode:screen;z-index:9999;display:flex;align-items:center;justify-content:center;transition:transform .12s linear}.cursor-ring::after{content:'';position:absolute;inset:0;border-radius:50%;box-shadow:0 0 60px 12px rgba(124,77,255,0.06), inset 0 0 30px rgba(0,212,255,0.02);border:1px solid rgba(255,255,255,0.02)}.cursor-dot{width:10px;height:10px;border-radius:50%;background:#fff;box-shadow:0 4px 14px rgba(0,0,0,0.6)}
 .reveal{opacity:0;transform:translateY(18px);transition:opacity .6s ease, transform .6s ease}.reveal.show{opacity:1;transform:none}
 ::-webkit-scrollbar{width:10px}::-webkit-scrollbar-thumb{background:linear-gradient(180deg,var(--accent),var(--accent2));border-radius:8px}
+/* Popup background blur */
+.video-popup {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.8);
+  backdrop-filter: blur(8px);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+/* Video box */
+.video-container {
+  position: relative;
+  width: 80%;
+  max-width: 900px;
+}
+
+.video-container video {
+  width: 100%;
+  border-radius: 15px;
+  box-shadow: 0 0 20px rgba(255,255,255,0.2);
+}
+
+/* Close button */
+.close-btn {
+  position: absolute;
+  top: -40px;
+  right: 0;
+  font-size: 2rem;
+  color: #fff;
+  cursor: pointer;
+}
+
+/* Play Button Style */
+.play-btn {
+  padding: 12px 30px;
+  font-size: 1.2rem;
+  border-radius: 50px;
+  border: none;
+  background: linear-gradient(45deg,#ff0057,#ff7b00);
+  color: #fff;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.play-btn:hover {
+  transform: scale(1.1);
+}
+
+/* Custom Cursor */
+.cursor-dot, .cursor-circle {
+  position: fixed;
+  top: 0; left: 0;
+  pointer-events: none;
+  z-index: 10000;
+  transform: translate(-50%, -50%);
+}
+.cursor-dot {
+  width: 6px; height: 6px;
+  border-radius: 50%;
+  background: white;
+}
+.cursor-circle {
+  width: 40px; height: 40px;
+  border: 2px solid white;
+  border-radius: 50%;
+  transition: transform 0.2s ease;
+}
