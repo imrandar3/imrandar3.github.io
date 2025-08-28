@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Muhammad Imran — Portfolio</title>
+<meta name="description" content="Muhammad Imran — designer & developer. Minimal, fast, and focused portfolio." />
+<link rel="icon" href="assets/favicon.svg" />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+<header class="topbar">
+  <nav class="nav container">
+    <a class="brand" href="#">Imran</a>
+    <ul class="navlinks">
+      <li><a href="#work">Work</a></li>
+      <li><a href="#lab">Lab</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+  <section id="hero" class="hero container">
+    <div class="hero-left">
+      <h1 class="hi">Hi, my name is</h1>
+      <h2 class="me">Muhammad Imran</h2>
+      <p class="lead">I design and develop minimal digital products — interfaces, micro‑interactions, and small experiments.</p>
+      <a href="#work" class="cta">→ Work</a>
+    </div>
+    <div class="hero-right">
+      <div class="big-dot" aria-hidden="true"></div>
+      <div class="portrait-wrap reveal">
+        <img src="assets/profile.svg" alt="Muhammad Imran" class="portrait">
+      </div>
+    </div>
+  </section>
+
+  <section id="work" class="section container">
+    <h3 class="section-title">Selected projects</h3>
+    <div class="grid projects-grid">
+      <article class="project tile tilt reveal">
+        <div class="num">00</div>
+        <h4>Smart Vet Assistant</h4>
+        <p>AI-assisted triage and treatments for livestock.</p>
+        <a class="more" href="#">→</a>
+      </article>
+      <article class="project tile tilt reveal">
+        <div class="num">01</div>
+        <h4>Dairy Farm Tracker</h4>
+        <p>Dashboard to track milk yields and herd health.</p>
+        <a class="more" href="#">→</a>
+      </article>
+      <article class="project tile tilt reveal">
+        <div class="num">02</div>
+        <h4>Portfolio Template</h4>
+        <p>Fast, accessible portfolio starter with animations.</p>
+        <a class="more" href="#">→</a>
+      </article>
+    </div>
+  </section>
+
+  <section id="lab" class="section container alt">
+    <h3 class="section-title">Lab & Experiments</h3>
+    <p class="muted">Mini games, codepens, and small experiments — things I build for practice.</p>
+    <div class="lab-grid">
+      <a class="lab-item" href="#" target="_blank">Rain Game</a>
+      <a class="lab-item" href="#" target="_blank">SVG Experiments</a>
+      <a class="lab-item" href="#" target="_blank">Micro Animations</a>
+    </div>
+  </section>
+
+  <section id="about" class="section container">
+    <h3 class="section-title">About</h3>
+    <pre class="code">class Imran {
+  constructor() { this.role = 'Full‑stack developer'; }
+  skills() { return ['HTML','CSS','JS','React','Node']; }
+  contact() { return 'hello@imran.com'; }
+}</pre>
+  </section>
+
+  <section id="contact" class="section container alt">
+    <h3 class="section-title">Contact</h3>
+    <p class="muted">hello@imran.com — <a href="https://github.com/imrandar3" target="_blank">github.com/imrandar3</a></p>
+  </section>
+</main>
+
+<footer class="footer container">
+  <small>© <span id="year"></span> Muhammad Imran — Made with care.</small>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>
