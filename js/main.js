@@ -40,3 +40,49 @@ document.querySelectorAll('.tilt').forEach(card=>{
 });
 // year
 document.getElementById('year').textContent = new Date().getFullYear();
+
+
+// 🎬 Video Popup
+const playBtn = document.getElementById("playBtn");
+const videoPopup = document.getElementById("videoPopup");
+const closeBtn = document.getElementById("closeBtn");
+
+playBtn.addEventListener("click", () => {
+  videoPopup.style.display = "flex";
+});
+
+closeBtn.addEventListener("click", () => {
+  videoPopup.style.display = "none";
+});
+
+// 🎯 Custom Cursor
+const cursorDot = document.createElement("div");
+const cursorCircle = document.createElement("div");
+
+cursorDot.classList.add("cursor-dot");
+cursorCircle.classList.add("cursor-circle");
+
+document.body.appendChild(cursorDot);
+document.body.appendChild(cursorCircle);
+
+document.addEventListener("mousemove", e => {
+  let x = e.clientX;
+  let y = e.clientY;
+
+  cursorDot.style.left = `${x}px`;
+  cursorDot.style.top = `${y}px`;
+
+  cursorCircle.style.left = `${x}px`;
+  cursorCircle.style.top = `${y}px`;
+});
+
+// 🎭 On scroll, cursor circle grows
+window.addEventListener("scroll", () => {
+  let scrollY = window.scrollY;
+  if (scrollY > window.innerHeight / 2) {
+    cursorCircle.style.transform = "translate(-50%, -50%) scale(2)";
+  } else {
+    cursorCircle.style.transform = "translate(-50%, -50%) scale(1)";
+  }
+});
+
