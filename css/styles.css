@@ -1,0 +1,89 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #0d1117;
+  color: #e6edf3;
+  line-height: 1.6;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+h1, h2 {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.hero {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #1f2937, #111827);
+}
+
+.hero h1 span {
+  color: #38bdf8;
+}
+
+.about, .projects, .timeline, .contact {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+/* Projects */
+.project-card {
+  background: #161b22;
+  padding: 20px;
+  margin: 15px auto;
+  width: 80%;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+  transition: transform 0.3s ease;
+}
+.project-card:hover {
+  transform: translateY(-5px);
+}
+
+/* Timeline */
+.timeline {
+  position: relative;
+}
+.timeline .line {
+  width: 4px;
+  background: #38bdf8;
+  height: 200px;
+  margin: 20px auto;
+}
+.timeline .step {
+  margin: 20px 0;
+}
+
+/* Cursor effect */
+.cursor {
+  width: 25px;
+  height: 25px;
+  border: 2px solid #38bdf8;
+  border-radius: 50%;
+  position: fixed;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  transition: all 0.1s ease;
+  z-index: 1000;
+}
+
+.hidden {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 0.8s ease-out;
+}
+
+.show {
+  opacity: 1;
+  transform: translateY(0);
+}
